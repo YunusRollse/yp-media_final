@@ -496,8 +496,13 @@
 
   // mobil sticky CTA: forma ko'rinayotganda yashiriladi
   const sticky=document.getElementById('stickyCta');
-  new IntersectionObserver(([e])=>{sticky.style.visibility=e.isIntersecting?'hidden':'visible'})
-    .observe(document.getElementById('aloqa'));
+  const seen=new Set();
+  const stickyIO=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>e.isIntersecting?seen.add(e.target):seen.delete(e.target));
+    sticky.style.visibility=seen.size?'hidden':'visible';
+  });
+  stickyIO.observe(document.querySelector('.under-video'));
+  stickyIO.observe(document.getElementById('aloqa'));
 
   // FAQ accordion
   document.querySelectorAll('.faq-q').forEach(btn=>{
