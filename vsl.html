@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#050d09" />
 <meta name="color-scheme" content="dark" />
 <title>YP Media — Reklamangiz kassaga pul olib kelsin</title>
-<meta name="description" content="30 kun ichida Instagram orqali aniq klientlar. Videoni ko'ring va bepul razborga yoziling." />
+<meta name="description" content="30 kun ichida Instagram orqali aniq klientlar. Bepul razborga yoziling." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -435,23 +435,16 @@
   </div>
 </header>
 
-<!-- ===================== HERO + VIDEO ===================== -->
+<!-- ===================== HERO ===================== -->
 <section class="vsl-hero">
   <div class="wrap">
-    <span class="eyebrow reveal"><span class="dot"></span>Biznes egalari uchun · qisqa video</span>
+    <span class="eyebrow reveal"><span class="dot"></span>Biznes egalari uchun</span>
     <h1 class="reveal">Reklamangiz quruq prosmotr emas, <span class="accent-word">kassaga pul</span> olib kelsin</h1>
-    <p class="lead reveal">Videoni oxirigacha ko'ring. 30 kun ichida Instagram orqali aniq klientlar olib keladigan tizimni ko'rsataman. Sizdan — haftasiga atigi 2 soat.</p>
-
-    <div class="video-box reveal" id="videoBox">
-      <div class="video-ph">
-        <div class="play"></div>
-        <span>Video tez orada shu yerda bo'ladi</span>
-      </div>
-    </div>
+    <p class="lead reveal">30 kun ichida Instagram orqali aniq klientlar olib keladigan tizim. Sizdan — haftasiga atigi 2 soat.</p>
 
     <div class="under-video reveal">
       <a class="btn btn-accent" href="#aloqa">Bepul razborga yozilish <span class="arw">→</span></a>
-      <span class="note">Videoni ko'rdingizmi? Biznesingizni bepul ko'rib chiqamiz</span>
+      <span class="note">Biznesingizni bepul ko'rib chiqamiz — shaxsan o'zim aloqaga chiqaman</span>
     </div>
 
     <div class="proof reveal">
@@ -512,15 +505,6 @@
 <div class="sticky-cta" id="stickyCta"><a class="btn btn-accent" href="#aloqa">Bepul razborga yozilish <span class="arw">→</span></a></div>
 
 <script>
-  // VSL video: YouTube/Vimeo embed havolasi yoki .mp4 fayl yo'li. Bo'sh bo'lsa — placeholder ko'rinadi.
-  const VIDEO_URL='';
-  if(VIDEO_URL){
-    const box=document.getElementById('videoBox');
-    box.innerHTML=/\.mp4($|\?)/.test(VIDEO_URL)
-      ?'<video src="'+VIDEO_URL+'" controls playsinline preload="metadata"></video>'
-      :'<iframe src="'+VIDEO_URL+'" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
-  }
-
   // reveal on scroll
   const io=new IntersectionObserver((entries)=>{
     entries.forEach((e)=>{
