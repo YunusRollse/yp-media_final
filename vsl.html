@@ -356,6 +356,11 @@
   .video-ph .play:after{content:"";margin-left:6px;border-left:24px solid #fff;border-top:15px solid transparent;border-bottom:15px solid transparent}
   .under-video{margin-top:28px;display:flex;flex-direction:column;align-items:center;gap:10px}
   .under-video .note{font-size:13px;color:var(--muted)}
+  .proof{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:40px auto 0;max-width:900px}
+  .proof .p{background:var(--paper-2);border:1px solid var(--line);border-radius:16px;padding:20px 14px;text-align:center}
+  .proof .n{font-size:clamp(26px,3.6vw,38px);font-weight:800;letter-spacing:-.02em;color:var(--accent);line-height:1.1}
+  .proof .l{font-size:13px;color:var(--ink-soft);margin-top:6px;font-weight:500;line-height:1.35}
+  @media(max-width:720px){.proof{grid-template-columns:repeat(2,1fr);gap:10px;margin-top:28px}.proof .p{padding:16px 10px}}
   .pain-grid,.steps{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
   .pain,.step{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
   .pain b{display:block;font-size:17px;margin-bottom:8px}
@@ -447,6 +452,13 @@
     <div class="under-video reveal">
       <a class="btn btn-accent" href="#aloqa">Bepul razborga yozilish <span class="arw">→</span></a>
       <span class="note">Videoni ko'rdingizmi? Biznesingizni bepul ko'rib chiqamiz</span>
+    </div>
+
+    <div class="proof reveal">
+      <div class="p"><div class="n">25+</div><div class="l">loyiha</div></div>
+      <div class="p"><div class="n">13 mlrd</div><div class="l">so'm mijozlarimizga savdo</div></div>
+      <div class="p"><div class="n">6</div><div class="l">kishilik jamoa</div></div>
+      <div class="p"><div class="n">7 kun</div><div class="l">ichida reklama ishga tushadi</div></div>
     </div>
   </div>
 </section>
